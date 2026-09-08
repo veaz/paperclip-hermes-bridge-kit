@@ -1,7 +1,7 @@
 export class PaperclipClient {
   constructor({ apiBase, apiKey } = {}) {
     this.apiBase = (apiBase || process.env.PAPERCLIP_API_BASE || 'http://127.0.0.1:3006').replace(/\/$/, '')
-    this.apiKey = apiKey || process.env.PAPERCLIP_API_KEY || ''
+    this.apiKey = apiKey === undefined ? process.env.PAPERCLIP_API_KEY || '' : apiKey
   }
 
   headers(extra = {}) {
