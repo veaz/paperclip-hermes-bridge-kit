@@ -88,3 +88,9 @@ This kit intentionally does not include:
 - private project IDs beyond placeholders.
 
 Use your own credentials and IDs in your local `.env` only.
+
+## Continuous integration
+
+Pull requests run Node.js 24 syntax checks and all offline tests in one job.
+There are no dependencies to install and no TypeScript build. New revisions
+cancel the previous run; CI can also be started manually.
